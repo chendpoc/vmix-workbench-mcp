@@ -1,0 +1,40 @@
+{
+  "name": "vmix-workbench-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Agent tools for vMix scene assembly, assets, transitions and managed triggers",
+  "type": "module",
+  "bin": {
+    "vmix-workbench-mcp": "build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "examples",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node build/index.js",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "mock": "node scripts/mock-vmix.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "format": "prettier --write src scripts test",
+    "format:check": "prettier --check src scripts test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "fast-xml-parser": "5.11.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "3.9.6",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "vmix": {
+      "command": "node",
+      "args": ["C:\\tools\\vmix-workbench-mcp\\build\\index.js"],
+      "env": {
+        "VMIX_API_URL": "http://127.0.0.1:8088/api/",
+        "VMIX_DATA_DIR": "C:\\vMixMCP\\state",
+        "VMIX_ASSET_ROOT": "C:\\vMixMCP\\assets",
+        "VMIX_SOURCE_ROOTS": "[\"C:\\\\MatchMedia\"]"
+      }
+    }
+  }
+}

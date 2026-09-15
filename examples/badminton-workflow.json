@@ -1,0 +1,14 @@
+{
+  "description": "Run these MCP calls in order after the named inputs exist. Inspect actual input GUIDs/names first. These are example calls, not an auto-executed startup script.",
+  "calls": [
+    {"name":"vmix_inspect","arguments":{}},
+    {"name":"vmix_scene_template","arguments":{"request_id":"court-quad-01","dry_run":true,"name":"Court quad","layout":"quad","sources":["Camera 1","Camera 2","Camera 3","Camera 4"],"width":3840,"height":2160}},
+    {"name":"vmix_scene_template","arguments":{"request_id":"court-quad-01","name":"Court quad","layout":"quad","sources":["Camera 1","Camera 2","Camera 3","Camera 4"],"width":3840,"height":2160}},
+    {"name":"vmix_transition_configure","arguments":{"request_id":"fade-button-01","button":1,"effect":"Fade","duration_ms":500}},
+    {"name":"vmix_transition_preset_save","arguments":{"name":"match-fade","effect":"Fade","duration_ms":500}},
+    {"name":"vmix_title_update","arguments":{"request_id":"title-01","input":"Scoreboard","fields":{"Score.Text":"15 : 12","Player.Text":"选手 A / 选手 B"}}},
+    {"name":"vmix_trigger_save","arguments":{"trigger":{"id":"show-score-on-main","input":"Camera 1","event":"program_enter","max_fires":10,"cooldown_ms":1000,"actions":[{"type":"overlay","input":"Scoreboard","channel":1,"visible":true}]}}},
+    {"name":"vmix_trigger_arm","arguments":{"id":"show-score-on-main","armed":true}},
+    {"name":"vmix_transition","arguments":{"request_id":"take-quad-01","input":"Court quad","preset":"match-fade"}}
+  ]
+}

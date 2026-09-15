@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "vmix": {
+      "command": "node",
+      "args": ["/absolute/path/vmix-workbench-mcp/build/index.js"],
+      "env": {
+        "VMIX_API_URL": "http://192.168.1.100:8088/api/",
+        "VMIX_DATA_DIR": "/absolute/path/vmix-state",
+        "VMIX_SOURCE_ROOTS": "[\"/absolute/path/MatchMedia\"]",
+        "VMIX_ASSET_ROOT": "/Volumes/vMixAssets",
+        "VMIX_VISIBLE_ASSET_ROOT": "D:\\vMixAssets"
+      }
+    }
+  }
+}
